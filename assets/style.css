@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 200vh;
+
+    background-color: #000;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 7vh;
+    background-color: rgb(1, 111, 255);
+
+    animation-name: surge-top;
+    animation-duration: 1s;
+}
+
+.left-header {
+    display: flex;
+    width: 10%;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.left-header a {
+    color: #fff;
+
+    transition: .25s;
+}
+
+.left-header a:hover {
+    color: aqua;
+    font-size: large;
+    text-shadow: 0px 0px 10px aqua;
+
+    transition: .25s;
+}
+
+.right-header {
+    display: flex;
+    width: 90%;
+    justify-content: end;
+    align-items: center;
+    padding: 10px;
+    border-left: 1px solid #fff;
+}
+
+.right-header a {
+    color: #fff;
+    padding: 25px;
+    text-decoration: none;
+
+    transition: .25s;
+}
+
+.right-header a:hover {
+    color: azure;
+    font-size: large;
+    text-shadow: 0px 0px 20px #fff;
+
+    transition: .25s;
+}
+
+main {
+    width: 100%;
+    min-height: 80vh;
+}
+
+.line-main {
+    display: flex;
+    position: absolute;
+    width: 50%;
+    height: 15vh;
+    border-right: 1px solid #fff;
+
+    animation-name: surge-top;
+    animation-duration: 1s;
+}
+
+.line-main-2 {
+    display: flex;
+    position: absolute;
+    width: 50%;
+    height: 15vh;
+    border-right: 1px solid #fff;
+
+    transform: translateY(50rem);
+
+    animation-name: surge-bottom;
+    animation-duration: 1s;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+/* 
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,32,121,1) 20%, rgba(0,142,255,1) 100%); */
+}
+
+.left-content {
+    display: flex;
+    width: 50%;
+    height: 100vh;
+    background-image: url(/assets/img/gifbrabo.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    animation-name: surge-left;
+    animation-duration: 1.75s;
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+
+    animation-name: surge-right;
+    animation-duration: 1.75s;
+}
+
+.right-content span {
+    color: aqua;
+}
+
+.about-me {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-image: url(/assets/img/fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content-about-me {
+    display: flex;
+    width: 50%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transform: translateX(100%);
+}
+
+.box-p-about-me {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 30vh;
+    padding: 10px;
+
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.box-p-about-me h1 {
+    text-align: center;
+    padding: 5px;
+}
+
+.box-p-about-me p {
+    padding: 5px;
+}
+
+.line-about-me {
+    display: flex;
+    position: absolute;
+    width: 25%;
+    height: 100vh;
+
+    transform: translate(200%, -18%);
+    border-right: 2.5px solid #fff;
+    border-top: 2.5px solid #fff;
+
+    animation-name: surge-bottom-about-me;
+    animation-duration: 1s;
+}
+
+@keyframes surge-top {
+    0% {transform: translateY(-22rem);}
+    100% {transform: translateX(0);}
+}
+
+@keyframes surge-left {
+    0% {transform: translateX(-50rem);}
+    100% {transform: translateX(0);}
+}
+
+@keyframes surge-right {
+    0% {transform: translateX(50rem);}
+    100% {transform: translateX(0);}
+}
+
+@keyframes surge-bottom {
+    0% {transform: translateY(60rem);}
+}
+
+@keyframes surge-bottom-about-me {
+    0% {transform: translatex(60rem);}
+}
